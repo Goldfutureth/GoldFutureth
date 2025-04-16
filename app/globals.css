@@ -2,12 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ฟ้อนต์หรูหรา Modern */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+
+:root {
+  --background: #0A0F1C; /* เฉดกรมหรู */
+  --foreground: #D4AF37; /* ทองหรู */
+  --font-family: 'Cinzel', serif;
+  --text-light: #f4f4f4;
+}
+
 body {
-  background-image: url('/leather-bg.png');
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family);
+  background-image: url('/bg-leather-texture.png'); /* ต้องวางไฟล์ไว้ใน public */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  color: #e3e3e3;
-  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* รองรับการเปลี่ยนธีมมืด */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0A0F1C;
+    --foreground: #D4AF37;
+  }
+}
+
+/* Motion เข้าหน้า */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

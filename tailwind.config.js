@@ -1,11 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',         // สำหรับ Next.js structure
-    './components/**/*.{js,ts,jsx,tsx}',  // ถ้ามีโฟลเดอร์ components
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gold: "#D4AF37",
+      },
+      fontFamily: {
+        cinzel: ['Cinzel', 'serif'],
+      },
+      backgroundImage: {
+        leather: "url('/bg-leather-texture.png')"
+      },
+    },
   },
   plugins: [],
-};
+}
