@@ -4,7 +4,10 @@ import { motion } from "framer-motion"
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-white bg-cover bg-center" style={{ backgroundImage: 'url(/leather-bg.png)' }}>
+    <main
+      className="min-h-screen text-white bg-cover bg-center"
+      style={{ backgroundImage: 'url(/leather-bg.png)' }}
+    >
       {/* HERO SECTION */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -12,7 +15,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center"
       >
-        <Image src="/logo.png" alt="Gold&Future Logo" width={120} height={120} className="mb-6" />
+        <Image src="/logo.png" alt="Gold&Future Logo" width={120} height={120} className="mb-6" priority unoptimized />
         <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gold">
           เทรดอย่างมืออาชีพ<br />
           ก้าวสู่อนาคตที่มั่งคั่ง
@@ -33,31 +36,10 @@ export default function Home() {
           </Link>
         </div>
       </motion.section>
-
-      {/* FEATURE SECTION */}
-      <section className="bg-black/30 py-12 px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-        <div>
-          <h3 className="text-2xl font-bold text-gold">LotBack</h3>
-          <p className="mt-2 text-sm text-white/80">โปรแกรมคืนกำไรต่อ Lot</p>
-        </div>
-        <div>
-          <h3 className="text-2xl font-bold text-gold">0.0</h3>
-          <p className="mt-2 text-sm text-white/80">สเปรดต่ำที่สุด</p>
-        </div>
-        <div>
-          <h3 className="text-2xl font-bold text-gold">STP</h3>
-          <p className="mt-2 text-sm text-white/80">บัญชีโปร่งใส ไม่มีแทรกแซง</p>
-        </div>
-        <div>
-          <h3 className="text-2xl font-bold text-gold">ฟรีสว็อป</h3>
-          <p className="mt-2 text-sm text-white/80">เทรดยาวได้สบายใจ</p>
-        </div>
-      </section>
-
-      {/* LINE OA */}
-      <section className="text-center py-10">
+           {/* LINE OA */}
+           <section className="text-center py-10">
         <p className="text-white mb-3">สอบถามเพิ่มเติมผ่าน LINE</p>
-        <Image src="/line-qr.png" alt="Line QR" width={160} height={160} className="mx-auto" />
+        <Image src="/line-qr.png" alt="Line QR" width={160} height={160} className="mx-auto" priority unoptimized />
         <Link href="https://lin.ee/IuQO3xF" target="_blank" rel="noopener noreferrer">
           <p className="mt-2 text-green-400 underline">เพิ่มเพื่อนที่นี่</p>
         </Link>
