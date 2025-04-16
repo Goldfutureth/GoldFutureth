@@ -41,14 +41,7 @@ export default function Home() {
         </div>
       </MotionSection>
 
-      {/* LINE OA */}
-      <section className="text-center py-10">
-        <p className="text-white mb-3">สอบถามเพิ่มเติมผ่าน LINE</p>
-        <Image src="/line-qr.png" alt="Line QR" width={160} height={160} className="mx-auto" priority unoptimized />
-        <Link href="https://lin.ee/IuQO3xF" target="_blank" rel="noopener noreferrer">
-          <p className="mt-2 text-green-400 underline">เพิ่มเพื่อนที่นี่</p>
-        </Link>
-      </section>
+      
 
       <footer className="text-center text-xs text-white/50 py-6">
         © 2025 Gold&Future Academy. All rights reserved.
