@@ -9,28 +9,46 @@ export default function Home() {
 
   return (
     <main
-      className="min-h-screen text-white bg-cover bg-center"
+      className="min-h-screen text-white bg-cover bg-center font-sans"
       style={{ backgroundImage: 'url(/leather-bg.png)' }}
     >
+      {/* NAVBAR */}
+      <nav className="w-full px-6 py-4 flex justify-between items-center text-sm">
+        <Image src="/logo.png" alt="GoldFuture Logo" width={60} height={60} unoptimized priority />
+        <div className="flex gap-6">
+          <Link href="#features">คุณสมบัติ</Link>
+          <Link href="#courses">คอร์สเรียน</Link>
+          <Link href="#contact">ติดต่อ</Link>
+        </div>
+        <Link
+          href="/register"
+          className="bg-gold text-black px-4 py-2 rounded-md font-medium hover:opacity-90"
+        >
+          สมัครสมาชิก
+        </Link>
+      </nav>
+
       {/* HERO SECTION */}
       <MotionSection
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center"
+        className="flex flex-col items-center justify-center px-6 pt-20 pb-10 text-center"
       >
-        <Image src="/logo.png" alt="Gold&Future Logo" width={120} height={120} className="mb-6" priority unoptimized />
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gold">
-          เทรดอย่างมืออาชีพ<br />
-          ก้าวสู่อนาคตที่มั่งคั่ง
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-gold drop-shadow">
+          เทรดอย่างมืออาชีพ
         </h1>
-        <p className="mt-4 text-lg max-w-xl text-gold/80">
-          คลังความรู้การเทรดทุกแขนง พร้อมระบบซัพพอร์ตนักเทรดครบวงจร
+        <h2 className="text-3xl md:text-5xl font-semibold text-white mt-2 drop-shadow">
+          ก้าวสู่อนาคตที่มั่งคั่ง
+        </h2>
+        <p className="mt-6 text-lg max-w-2xl text-white/80">
+          คลังความรู้การเทรดทุกแขนง พร้อมระบบซัพพอร์ตนักเทรดครบวงจร 
+          ด้วยระบบที่ทันสมัยและปลอดภัย
         </p>
         <div className="flex flex-col md:flex-row gap-4 mt-8">
           <Link href="/register">
             <button className="bg-gold text-black font-semibold px-6 py-3 rounded-lg shadow-md hover:opacity-90">
-              สมัครสมาชิก
+              เริ่มต้นเรียนรู้
             </button>
           </Link>
           <Link href="/courses">
@@ -41,7 +59,14 @@ export default function Home() {
         </div>
       </MotionSection>
 
-      
+      {/* LINE OA */}
+      <section id="contact" className="text-center py-10">
+        <p className="text-white mb-3">สอบถามเพิ่มเติมผ่าน LINE</p>
+        <Image src="/line-qr.png" alt="Line QR" width={160} height={160} className="mx-auto" unoptimized />
+        <Link href="https://lin.ee/IuQO3xF" target="_blank" rel="noopener noreferrer">
+          <p className="mt-2 text-green-400 underline">เพิ่มเพื่อนที่นี่</p>
+        </Link>
+      </section>
 
       <footer className="text-center text-xs text-white/50 py-6">
         © 2025 Gold&Future Academy. All rights reserved.
