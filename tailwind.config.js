@@ -12,6 +12,8 @@ module.exports = {
       },
       fontFamily: {
         display: ["'Playfair Display'", "serif"], // ฟอนต์หรูหราสำหรับ heading
+        sans: ["'Kanit'", "'Sukhumvit Set'", "sans-serif"], // ฟอนต์หลักที่ดู modern, รองรับไทย
+        heading: ["'Kanit'", "'Sukhumvit Set'", "sans-serif"], // สำหรับ heading โดยเฉพาะ
       },
     },
   },

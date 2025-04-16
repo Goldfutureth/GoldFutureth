@@ -16,11 +16,13 @@ export default function RootLayout({
     <html lang="th">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Kanit:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className="font-sans bg-cover bg-no-repeat">
+        {children}
+      </body>
     </html>
   )
 }

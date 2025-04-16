@@ -1,44 +1,46 @@
+/* ✅ Font import: Prompt (เหมาะสำหรับภาษาไทย + ความรู้สึก modern luxury) */
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
 
+/* ✅ Tailwind Base Setup */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ✅ Import Prompt font for Thai + Modern luxury feel */
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
-
+/* ✅ CSS Variables สำหรับธีม */
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #0a0a0a; /* Dark base background */
+  --foreground: #ededed; /* Primary text color */
   --font-primary: 'Prompt', sans-serif;
 }
 
+/* ✅ Body Styling */
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-primary);
-  background-image: url('/bg-leather-1280x800.png'); /* Make sure this matches your static file */
+  background-image: url('/bg-leather-1280x800.png'); /* ตรวจสอบให้แน่ใจว่าไฟล์นี้อยู่ใน public folder */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  /* Smooth motion */
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; /* Smooth page transition */
 }
 
+/* ✅ Headings */
 h1, h2, h3, h4 {
   font-weight: 700;
   color: #f5f5f5;
   letter-spacing: -0.02em;
 }
 
+/* ✅ Button Styling */
 button {
   transition: all 0.2s ease-in-out;
 }
 
-/* 🪄 Optional luxury hover effect for buttons */
+/* ✅ Button Hover Effects - Luxury Vibe */
 button:hover {
   transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2); /* Gold hover glow */
 }
