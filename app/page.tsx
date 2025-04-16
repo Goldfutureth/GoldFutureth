@@ -1,80 +1,71 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-4 py-12 bg-fixed bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/bg-leather-1280x800.png')" }}
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
+    <main className="min-h-screen text-white bg-cover bg-center" style={{ backgroundImage: 'url(/leather-bg.png)' }}>
+      {/* HERO SECTION */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
-        className="text-center text-white max-w-xl w-full"
+        transition={{ duration: 0.8 }}
+        className="flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center"
       >
-        {/* โลโก้ */}
-        <div className="mb-6">
-          <Image
-            src="/logo.png"
-            alt="Gold&Future Logo"
-            width={100}
-            height={100}
-            className="mx-auto"
-          />
-        </div>
-
-        {/* Heading */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 text-gold">
-          เทรดอย่างมืออาชีพ <br /> ก้าวสู่อนาคตที่มั่งคั่ง
+        <Image src="/logo.png" alt="Gold&Future Logo" width={120} height={120} className="mb-6" />
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gold">
+          เทรดอย่างมืออาชีพ<br />
+          ก้าวสู่อนาคตที่มั่งคั่ง
         </h1>
-
-        {/* Subtext */}
-        <p className="text-sm md:text-base text-gray-300 mb-8">
+        <p className="mt-4 text-lg max-w-xl text-gold/80">
           คลังความรู้การเทรดทุกแขนง พร้อมระบบซัพพอร์ตนักเทรดครบวงจร
         </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+        <div className="flex flex-col md:flex-row gap-4 mt-8">
           <Link href="/register">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg transition duration-200">
+            <button className="bg-gold text-black font-semibold px-6 py-3 rounded-lg shadow-md hover:opacity-90">
               สมัครสมาชิก
             </button>
           </Link>
           <Link href="/courses">
-            <button className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-semibold px-6 py-3 rounded-lg transition duration-200">
+            <button className="border border-gold text-gold font-semibold px-6 py-3 rounded-lg hover:bg-gold hover:text-black">
               ดูคอร์สทั้งหมด
             </button>
           </Link>
         </div>
+      </motion.section>
 
-        {/* QR CODE */}
-        <div className="mb-4">
-          <p className="text-gray-400 mb-2">สอบถามเพิ่มเติมผ่าน LINE</p>
-          <Image
-            src="/line-qr.png"
-            alt="Line QR"
-            width={160}
-            height={160}
-            className="mx-auto"
-          />
-          <Link
-            href="https://lin.ee/IuQO3xF"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-400 underline block mt-2"
-          >
-            เพิ่มเพื่อนที่นี่
-          </Link>
+      {/* FEATURE SECTION */}
+      <section className="bg-black/30 py-12 px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <h3 className="text-2xl font-bold text-gold">LotBack</h3>
+          <p className="mt-2 text-sm text-white/80">โปรแกรมคืนกำไรต่อ Lot</p>
         </div>
+        <div>
+          <h3 className="text-2xl font-bold text-gold">0.0</h3>
+          <p className="mt-2 text-sm text-white/80">สเปรดต่ำที่สุด</p>
+        </div>
+        <div>
+          <h3 className="text-2xl font-bold text-gold">STP</h3>
+          <p className="mt-2 text-sm text-white/80">บัญชีโปร่งใส ไม่มีแทรกแซง</p>
+        </div>
+        <div>
+          <h3 className="text-2xl font-bold text-gold">ฟรีสว็อป</h3>
+          <p className="mt-2 text-sm text-white/80">เทรดยาวได้สบายใจ</p>
+        </div>
+      </section>
 
-        {/* Footer */}
-        <footer className="mt-8 text-sm text-gray-500">
-          © 2025 Gold&Future Academy. All rights reserved.
-        </footer>
-      </motion.div>
+      {/* LINE OA */}
+      <section className="text-center py-10">
+        <p className="text-white mb-3">สอบถามเพิ่มเติมผ่าน LINE</p>
+        <Image src="/line-qr.png" alt="Line QR" width={160} height={160} className="mx-auto" />
+        <Link href="https://lin.ee/IuQO3xF" target="_blank" rel="noopener noreferrer">
+          <p className="mt-2 text-green-400 underline">เพิ่มเพื่อนที่นี่</p>
+        </Link>
+      </section>
+
+      <footer className="text-center text-xs text-white/50 py-6">
+        © 2025 Gold&Future Academy. All rights reserved.
+      </footer>
     </main>
   )
 }
