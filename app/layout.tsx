@@ -14,7 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="th">
-      <head />
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>{children}</body>
     </html>
   )

@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         gold: '#D4AF37', // สีทองหรูหราแบบ Royal Gold
       },
+      fontFamily: {
+        display: ["'Playfair Display'", "serif"], // ฟอนต์หรูหราสำหรับ heading
+      },
     },
   },
   plugins: [],
