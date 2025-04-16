@@ -1,11 +1,11 @@
-// tailwind.config.js
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',         // สำหรับ Next.js structure
+    './components/**/*.{js,ts,jsx,tsx}',  // ถ้ามีโฟลเดอร์ components
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
