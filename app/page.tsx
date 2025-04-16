@@ -37,7 +37,7 @@ export default function Home() {
       {/* Line OA Section */}
       <div className="mt-10 text-center">
         <p className="text-gray-400 mb-2">สอบถามเพิ่มเติมผ่าน LINE</p>
-        <Image src="/line-qr.png" alt="Line QR" width={160} height={160} className="mx-auto" />
+        <Image src="/line-qr.jpg" alt="Line QR" width={160} height={160} className="mx-auto" />
         <Link href="https://lin.ee/IuQO3xF" target="_blank" rel="noopener noreferrer">
           <p className="mt-2 text-green-400 underline">เพิ่มเพื่อนที่นี่</p>
         </Link>
