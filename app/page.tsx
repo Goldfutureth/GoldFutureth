@@ -17,7 +17,7 @@ export default function Home() {
 
       {/* Subtext */}
       <p className="mt-4 text-lg text-center max-w-md text-gray-300">
-        คลังความรู้การเทรดทุกแขนง
+        คลังความรู้การเทรดทุกแขนง พร้อมระบบ Support นักเทรดครบวงจร
       </p>
 
       {/* CTA Buttons */}
