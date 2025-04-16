@@ -1,15 +1,19 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
 export default function Home() {
+  const MotionSection = motion.section
+
   return (
     <main
       className="min-h-screen text-white bg-cover bg-center"
       style={{ backgroundImage: 'url(/leather-bg.png)' }}
     >
       {/* HERO SECTION */}
-      <motion.section
+      <MotionSection
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -35,9 +39,10 @@ export default function Home() {
             </button>
           </Link>
         </div>
-      </motion.section>
-           {/* LINE OA */}
-           <section className="text-center py-10">
+      </MotionSection>
+
+      {/* LINE OA */}
+      <section className="text-center py-10">
         <p className="text-white mb-3">สอบถามเพิ่มเติมผ่าน LINE</p>
         <Image src="/line-qr.png" alt="Line QR" width={160} height={160} className="mx-auto" priority unoptimized />
         <Link href="https://lin.ee/IuQO3xF" target="_blank" rel="noopener noreferrer">
